@@ -17,6 +17,17 @@ export function HomeScreen({
 }: Props) {
   return (
     <div className="screen">
+      <div
+        style={{
+          alignSelf: 'flex-end',
+          fontSize: 11,
+          opacity: 0.45,
+          letterSpacing: 0.5,
+          marginBottom: -10,
+        }}
+      >
+        Sara stinkt
+      </div>
       <div className="spacer" />
       <div className="brand">
         <div className="brand-mark">♪</div>
