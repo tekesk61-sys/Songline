@@ -1,3 +1,4 @@
+import type { CSSProperties } from 'react';
 import { Button } from '../components/Button';
 
 interface Props {
@@ -15,19 +16,25 @@ export function HomeScreen({
   onInstructions,
   onSettings,
 }: Props) {
+  const cornerStyle: CSSProperties = {
+    position: 'absolute',
+    fontSize: 11,
+    opacity: 0.45,
+    letterSpacing: 0.5,
+    pointerEvents: 'none',
+  };
+
   return (
-    <div className="screen">
-      <div
-        style={{
-          alignSelf: 'flex-end',
-          fontSize: 11,
-          opacity: 0.45,
-          letterSpacing: 0.5,
-          marginBottom: -10,
-        }}
-      >
-        Sara stinkt
+    <div className="screen" style={{ position: 'relative' }}>
+      <div style={{ ...cornerStyle, top: 12, left: 16 }}>
+        Sophie ist eine diktatorin
       </div>
+      <div style={{ ...cornerStyle, top: 12, right: 16 }}>Sara stinkt</div>
+      <div style={{ ...cornerStyle, bottom: 12, left: 16 }}>Ana ist gemein</div>
+      <div style={{ ...cornerStyle, bottom: 12, right: 16 }}>
+        Niki ist schlecht in rocket league
+      </div>
+
       <div className="spacer" />
       <div className="brand">
         <div className="brand-mark">♪</div>
